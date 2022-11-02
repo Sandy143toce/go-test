@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/Sandy143toce/go-test/handlers"
 	"github.com/gofiber/fiber/v2"
-	"github.com/Sandy143toce/go-test"
 )
 
 func setupRoutes(app *fiber.App) {

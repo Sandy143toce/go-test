@@ -2,6 +2,8 @@ package handlers
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/Sandy143toce/go-test/models"
+	"github.com/Sandy143toce/go-test/database"
 )
 
 // func setupRoutes(app *fiber.App) {

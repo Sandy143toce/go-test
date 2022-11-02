@@ -2,11 +2,13 @@ package database
 
 import (
 	"fmt"
-	"os"
 	"log"
+	"os"
+
+	"github.com/Sandy143toce/go-test/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"github.com/Sandy143toce/go-test/models"
+	"gorm.io/gorm/logger"
 )
 
 type Dbinstance struct {
@@ -33,10 +35,10 @@ func ConnectDb() {
 
 	log.Println("connected")
 	db.Logger = logger.Default.LogMode(logger.Info)
+
 	log.Println("running migrations")
 	db.AutoMigrate(&models.Fact{})
-
-	DB = Dbinstance(
+	DB = Dbinstance{
 		Db: db,
-	)
+	}
 }
